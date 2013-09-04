@@ -1,4 +1,5 @@
 esMultiploDe3 :: Integer -> Bool
-esMultiploDe3 0         = True
-esMultiploDe3 n | n < 0 = False
-esMultiploDe3 n | n > 0 = esMultiploDe3(n - 1)
+esMultiploDe3 0               = True
+esMultiploDe3 n | abs(n) == 1 = False
+esMultiploDe3 n | abs(n) == 2 = False
+esMultiploDe3 n               = esMultiploDe3(abs(n) - 3)
