@@ -1,12 +1,8 @@
-composeFoG :: (Float -> Float) -> (Float -> Float) -> Float -> Float
-composeFoG f g x = f(g(x))
+hacer :: Float -> Float
+hacer x = 1 / x
 
+g :: Float -> Float
+g x = 0
 
-squareRoot :: Float -> Float
-squareRoot x = sqrt x
-
-valueAbs :: Float -> Float
-valueAbs x | x < 0 = -x
-valueAbs x | x >= 0 = x
-
--- nuevaFuncion = composeFoG squareRoot valueAbs
+g(hacer(2))
+hacer(g(23)) -- esta indefinida
