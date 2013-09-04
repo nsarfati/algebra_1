@@ -1,8 +1,6 @@
-composeFoG :: Float -> (Float -> Float) -> (Float -> Float) -> Float
-composeFoG x f g = f(g(x))
+composeFoG :: (Float -> Float) -> (Float -> Float) -> Float -> Float
+composeFoG f g x = f(g(x))
 
-composeGoF :: Float -> (Float -> Float) -> (Float -> Float) -> Float
-composeGoF x f g = g(f(x))
 
 squareRoot :: Float -> Float
 squareRoot x = sqrt x
@@ -10,3 +8,5 @@ squareRoot x = sqrt x
 valueAbs :: Float -> Float
 valueAbs x | x < 0 = -x
 valueAbs x | x >= 0 = x
+
+-- nuevaFuncion = composeFoG squareRoot valueAbs
